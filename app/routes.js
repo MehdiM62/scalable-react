@@ -31,9 +31,17 @@ export default function createRoutes(store) {
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([component, reducer, sagas]) => {
-          injectReducer('navigationContainer', reducer.default);
-          injectSagas('navigationContainer', sagas.default);
+        importModules.then(([
+          component, 
+          navigationReducer,
+          navigationSagas,
+          linkListReducer,
+          linkListSagas,
+        ]) => {
+          injectReducer('navigationContainer', navigationReducer.default);
+          injectSagas('navigationContainer', navigationSagas.default);
+          injectReducer('linkListContainer', linkListReducer.default);
+          injectSagas('linkList', linkListSagas.default);
           renderRoute(component);
         });
 
