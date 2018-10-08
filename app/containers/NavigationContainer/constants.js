@@ -8,4 +8,5 @@ export const REQUEST_TOPICS = 'app/NavigationContainer/REQUEST_TOPICS';
 export const REQUEST_TOPICS_SUCCEEDED = 'app/NavigationContainer/REQUEST_TOPICS_SUCCEEDED';
 export const REQUSET_TOPICS_FAILED ='app/NavigationContainer/REQUEST_TOPICS_FAILIED';
 export const SELECT_TOPIC ='app/NavigationContainer/SELECT_TOPIC';
+export const TOGGLE_DRAWER = 'app/NavigationContainer/TOGGLE_DRAWER';
 
