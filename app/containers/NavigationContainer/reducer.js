@@ -20,6 +20,8 @@ function navigationContainerReducer(state = initialState, action) {
   switch (action.type) {
     case REQUEST_TOPICS_SUCCEEDED:
       return state.set('topics', action.topics);
+    case '@@router/LOCATION_CAHNGE': // the type of the action fired by react-router's redux bindings
+      return state.set('routerLocation', action.payload.pathname);
     case TOGGLE_DRAWER:
       return state.set('isDrawerOpen', !state.get('isDrawerOpen'));
     case SELECT_TOPIC:
